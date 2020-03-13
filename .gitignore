@@ -4,6 +4,7 @@
 
 ### Go ###
 # Binaries for programs and plugins
+./gowebservicedemo
 *.exe
 *.exe~
 *.dll
