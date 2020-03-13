@@ -4,12 +4,14 @@ import (
 	"fmt"
 	"net/http"
 
-	"github.com/michelkazi/gowebservicedemo/controllers"
+	"github.com/gorilla/mux"
 )
 
 func main() {
-	port := 3000
-	controllers.RegisterControllers()
-	fmt.Printf("Server listening on port %d\n", port)
-	http.ListenAndServe(fmt.Sprintf(":%d", port), nil)
+	router := mux.NewRouter()
+	const port string = ":8000"
+
+	router.HandleFunc("/", func(res http.ResponseWriter, req *http.Request) {
+		fmt.Fprintln(resp, "Up and Running...")
+	})
 }
